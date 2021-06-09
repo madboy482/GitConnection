@@ -55,7 +55,7 @@ def support(_bot, update):
     """Links to Support"""
     message = update.effective_message
     message.reply_text(
-        f"*Getting Support :*\n\nTo get support in using the bot, Join [GitConnection Support](https://telegram.me/GitConnectionSupport).",
+        f"*Getting Support :*\n\nTo get support in using the bot, Join *[GitConnection Support](https://telegram.me/GitConnectionSupport)*.",
         parse_mode="markdown"
     )
 
@@ -64,7 +64,7 @@ def owner(_bot, update):
     """Link to Owner"""
     message = update.effective_message
     message.reply_text(
-        f"*Owner :*\n\n\n[MadBoy - GitHub](https://github.com/madboy482)\n\n[MadBoy - Telegram](https://telegram.me/Disheartened_007)",
+        f"*Owner :*\n\n\n*[MadBoy - GitHub](https://github.com/madboy482)*\n\n*[MadBoy - Telegram](https://telegram.me/Disheartened_007)*",
         parse_mode="markdown"
     )
     
