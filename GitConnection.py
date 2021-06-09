@@ -21,7 +21,7 @@ if ENV:
     PROJECT_NAME = environ.get('PROJECT_NAME', None)
     ip_addr = environ.get('APP_URL', None)
     # You kanged our project without forking it, we'll get you DMCA'd.
-    GIT_REPO_URL = environ.get('GIT_REPO_URL', "https://github.com/MadeByThePinsHub/GitGram")
+    GIT_REPO_URL = environ.get('GIT_REPO_URL', "https://github.com/madboy482/GitConnect")
 else:
     BOT_TOKEN = config.BOT_TOKEN
     PROJECT_NAME = config.PROJECT_NAME
@@ -31,14 +31,14 @@ else:
 updater = Updater(token=BOT_TOKEN, workers=1)
 dispatcher = updater.dispatcher
 
-print("If you need more help, join @GitGramChat in Telegram.")
+print("Bot Successfully Started, For any queries, contact @Disheartened_007 on Telegram.")
 
 
 def start(_bot, update):
     """/start message for bot"""
     message = update.effective_message
     message.reply_text(
-        f"This is the Updates watcher for {PROJECT_NAME}. I am just notify users about what's happen on their Git repositories thru webhooks.\n\nYou need to [self-host](https://waa.ai/GitGram) or see /help to use this bot on your groups.",
+        f"This is the Updates Watcher for {PROJECT_NAME}. I just notify users about what's happening on their GitHub repositories thru webhooks.\n\nYou need to see /help to use this bot on your groups.",
         parse_mode="markdown")
 
 
@@ -46,7 +46,7 @@ def help(_bot, update):
     """/help message for the bot"""
     message = update.effective_message
     message.reply_text(
-        f"*Available Commands*\n\n`/connect` - Setup how to connect this chat to receive Git activity notifications.\n`/support` - Get links to get support if you're stuck.\n`/source` - Get the Git repository URL.",
+        f"*Available Commands :*\n\n`/start` - Start the OP Bot!!\n`/connect` - Setup how to connect this chat to receive GitHub activity notifications.\n`/support` - Get help from DEVs, if you're stuck.\n`/owner` - Get the Bot's Owner Contact ID.\n`/devs` - Get the Bot's DEVs Contact ID.",
         parse_mode="markdown"
     )
 
@@ -55,37 +55,39 @@ def support(_bot, update):
     """Links to Support"""
     message = update.effective_message
     message.reply_text(
-        f"*Getting Support*\n\nTo get support in using the bot, join [the GitGram support](https://t.me/GitGramChat).",
+        f"*Getting Support :*\n\nTo get support in using the bot, Join [GitConnection Support](https://telegram.me/GitConnectionSupport).",
         parse_mode="markdown"
     )
 
 
-def source(_bot, update):
-    """Link to Source"""
+def owner(_bot, update):
+    """Link to Owner"""
     message = update.effective_message
     message.reply_text(
-        f"*Source*:\n[GitGram Repo](https://waa.ai/GitGram).",
+        f"*Owner :*\n\n\n[MadBoy - GitHub](https://github.com/madboy482)\n\n[MadBoy - Telegram](https://telegram.me/Disheartened_007)",
         parse_mode="markdown"
     )
-
-
-def getSourceCodeLink(_bot, update):
-    """Pulls link to the source code."""
+    
+ def devs(_bot, update):
+    """Link to DEVs"""
     message = update.effective_message
     message.reply_text(
-        f"{GIT_REPO_URL}"
+        f"*DEVs :*\n\n\nAdding Soon.",
+        parse_mode="markdown"
     )
 
 
 start_handler = CommandHandler("start", start)
 help_handler = CommandHandler("help", help)
 supportCmd = CommandHandler("support", support)
-sourcecode = CommandHandler("source", source)
+ownerLink = CommandHandler("owner", owner)
+devsLink = CommandHanler("devs", devs)
 
 dispatcher.add_handler(start_handler)
 dispatcher.add_handler(help_handler)
 dispatcher.add_handler(supportCmd)
-dispatcher.add_handler(sourcecode)
+dispatcher.add_handler(ownerLink)
+dispatcher.add_handler(devsLink)
 updater.start_polling()
 
 TG_BOT_API = f'https://api.telegram.org/bot{BOT_TOKEN}/'
@@ -135,7 +137,7 @@ def git_api(groupid):
     """Requests to api.github.com"""
     data = request.json
     if not data:
-        return f"<b>Add this url:</b> {ip_addr}/{groupid} to webhooks of the project"
+        return f"<b>Add this url :</b> {ip_addr}/{groupid} to webhooks of the project"
 
     if data.get('hook'):
         repo_url = data['repository']['html_url']
@@ -144,7 +146,7 @@ def git_api(groupid):
         sender_name = data['sender']['login']
         response = post_tg(
             groupid,
-            f"🙌 Successfully set webhook for <a href='{repo_url}'>{repo_name}</a> by <a href='{sender_url}'>{sender_name}</a>!",
+            f"🙌 Successfully set webhook for <a href='{repo_url}'>{repo_name}</a> by <a href='{sender_url}'>{sender_name}</a> !",
             "html"
         )
         return response
