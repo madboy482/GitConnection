@@ -8,7 +8,6 @@
     ],
     "repository": "https://github.com/madboy482/GitConnection",
     "success_url": "https://t.me/GitConnectionSupport",
-    "stack": "container",
     "env": {
         "ENV": {
             "description": "Fill this if you using environ variable as config.",
