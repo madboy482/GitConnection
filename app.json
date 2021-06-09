@@ -1,14 +1,13 @@
 {
-    "name": "GitGram",
+    "name": "GitConnection",
     "description": "GitHub and GitLab Integration for Telegram Bot API",
     "logo": "",
     "keywords": [
         "telegram",
         "github"
     ],
-    "repository": "https://github.com/pokurt/GitGram",
-    "website": "https://github.com/pokurt/GitGram",
-    "success_url": "https://t.me/GitGramChat",
+    "repository": "https://github.com/madboy482/GitConnection",
+    "success_url": "https://t.me/GitConnectionSupport",
     "stack": "container",
     "env": {
         "ENV": {
