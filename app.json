@@ -17,12 +17,10 @@
         "BOT_TOKEN": {
             "description": "Get Bot API Token from @BotFather",
             "value": ""
-            "required": true
         },
         "PROJECT_NAME": {
             "description": "Project of what you desire",
             "value": ""
-            "required": true
         },
         "APP_URL": {
             "description": "Heroku app url, example: https://appname.herokuapp.com",
