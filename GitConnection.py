@@ -66,7 +66,7 @@ def owner(_bot, update):
     message.reply_text(
         f"*Owner :*\n\n\n[MadBoy - GitHub](https://github.com/madboy482)\n\n[MadBoy - Telegram](https://telegram.me/Disheartened_007)",
         parse_mode="markdown"
-        link_preview="false"
+        link_preview=false
     )
     
 def devs(_bot, update):
