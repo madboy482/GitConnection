@@ -68,7 +68,7 @@ def owner(_bot, update):
         parse_mode="markdown"
     )
     
- def devs(_bot, update):
+def devs(_bot, update):
     """Link to DEVs"""
     message = update.effective_message
     message.reply_text(
