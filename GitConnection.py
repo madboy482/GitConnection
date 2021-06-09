@@ -81,7 +81,7 @@ start_handler = CommandHandler("start", start)
 help_handler = CommandHandler("help", help)
 supportCmd = CommandHandler("support", support)
 ownerLink = CommandHandler("owner", owner)
-devsLink = CommandHanler("devs", devs)
+devsLink = CommandHandler("devs", devs)
 
 dispatcher.add_handler(start_handler)
 dispatcher.add_handler(help_handler)
