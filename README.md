@@ -13,3 +13,4 @@ If you want to deploy this app on Heroku, there's a one-click setup for that. Cl
 ## Credits:
 - GitGram »» <a href="https://github.com/pokurt/GitGram" alt="GitGram"> <img src="https://img.shields.io/badge/GitGram-E5E4E2?logo=github" /></a>
 - MadBoy »» <a href="https://github.com/madboy482" alt="MadBoy"> <img src="https://img.shields.io/badge/MadBoy-30302f?logo=github" /></a>
+- Pranav »» <a href="https://telegram.me/ItS_PRaNAv_Xd" alt="Pranav"> <img src="https://img.shields.io/badge/PRANAV-adff2f?logo=telegram" /></a>
