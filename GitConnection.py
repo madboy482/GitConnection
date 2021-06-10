@@ -74,7 +74,7 @@ def devs(_bot, update):
     """Link to DEVs"""
     message = update.effective_message
     message.reply_text(
-        f"*DEVs :*\n\n\nAdding Soon.",
+        f"*DEVs :*\n\n\n[Pranav - Telegram](https://telegram.me/ItS_PRaNAv_Xd)",
         parse_mode="markdown",
         link_preview=False
     )
